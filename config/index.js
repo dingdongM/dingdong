@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+/*
+ * @Author: your name
+ * @Date: 2019-11-26 10:18:12
+ * @LastEditTime: 2019-12-05 16:46:04
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \myjsonserverf:\work\dingdong\config\index.js
+ */
+>>>>>>> wentan
 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
@@ -10,7 +21,19 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+<<<<<<< HEAD
     proxyTable: {},
+=======
+    proxyTable: {
+      '/api':{
+        target:'http://localhost:3000',
+        changeOrigin:true,
+        pathRewrite:{
+          '^/api':''
+        }
+      }
+    },
+>>>>>>> wentan
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -43,7 +66,11 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
+<<<<<<< HEAD
     assetsPublicPath: './',
+=======
+    assetsPublicPath: '/',
+>>>>>>> wentan
 
     /**
      * Source Maps
