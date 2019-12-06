@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-26 18:00:29
- * @LastEditTime: 2019-12-02 17:40:14
+ * @LastEditTime: 2019-12-05 16:56:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \day13d:\dingdong\src\pages\eatwhat.vue
@@ -32,7 +32,12 @@ export default {
         }
     },
     created(){
-        this.$store.dispatch('getInfo',this.detailname)    
+        if(this.$route.query.detailname){
+            console.log(this.$route.query.detailname)
+            this.$store.dispatch('getInfo',this.$route.query.detailname)  
+        }else{
+            this.$store.dispatch('getInfo',this.detailname)             
+        }          
     },
     components:{EatDetailHead,EatDetailContent,EatMaterial,EatBottom,EatStep},
     mounted () {

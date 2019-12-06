@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-29 15:35:21
- * @LastEditTime: 2019-12-03 10:54:52
+ * @LastEditTime: 2019-12-06 11:24:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \day13d:\dingdong\src\components\EatBottom.vue
@@ -49,7 +49,7 @@ export default {
     },
     watch:{
         id:function (a){      //id是删除的computed里面的属性，传入的是id的变化后的值
-            axios.get('http://localhost:3000/addfavorite?id='+a)
+            axios.get('http://10.35.161.8:3000/addfavorite?id='+a)
                 .then(res=>{  
                     console.log("查询id")   
                     console.log(a)            
@@ -73,7 +73,7 @@ export default {
                 newproduct.id=this.$store.state.infos.id
                 newproduct.detailname=this.$store.state.infos.detailname
                 console.log(newproduct)
-                axios.post('http://localhost:3000/addfavorite',newproduct)
+                axios.post('http://10.35.161.8:3000/addfavorite',newproduct)
                 .then(res=>{
                     if(res.status=="201"){
                         this.shoucang=true
@@ -88,7 +88,7 @@ export default {
                 console.log(this.content)
                 console.log("删除id")
                 console.log(this.id)
-                axios.delete('http://localhost:3000/addfavorite/'+this.id)
+                axios.delete('http://10.35.161.8:3000/addfavorite/'+this.id)
                 .then(
                     res=>{
                         console.log(res)

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-26 16:40:31
- * @LastEditTime: 2019-11-30 10:43:54
+ * @LastEditTime: 2019-12-04 15:05:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \day13d:\dingdong\src\components\eatSearch.vue
@@ -14,8 +14,10 @@
         <input type="text" placeholder="搜索菜谱、石材">         
       </div>
       <div class="right">
-        <i id="favorite" class="iconfont icon-favorite"></i>
-        <p>收藏</p>
+        <router-link to="/sharePage">
+           <i id="favorite" class="iconfont icon-zhaoxiangji"></i>
+        </router-link>
+        <!-- <p>收藏</p> -->
       </div>
 
     </div>
@@ -67,9 +69,11 @@ export default {
   float: right;
   margin-bottom: 3px;
 }
-.right p{
-  font-size: 7px;
-  line-height: 7px;
+.right {
+  line-height:0.27rem;
 }
-
+.right .iconfont{
+  color: black;
+  font-size: 0.2rem;
+}
 </style>

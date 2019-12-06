@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-26 20:21:48
- * @LastEditTime: 2019-11-30 21:10:26
+ * @LastEditTime: 2019-12-06 11:24:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \day13d:\dingdong\src\components\EatNav.vue
@@ -44,7 +44,7 @@ export default {
         }
     },
     created(){
-        axios.get("http://localhost:3000/title")
+        axios.get("http://10.35.161.8:3000/title")
         .then(res=>{
             this.titles=res.data
         })

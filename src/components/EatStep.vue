@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-29 16:35:13
- * @LastEditTime: 2019-12-03 09:18:54
+ * @LastEditTime: 2019-12-04 23:55:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \day13d:\dingdong\src\components\EatStep.vue
@@ -11,7 +11,7 @@
         <h1><i class="iconfont icon-canpan"></i>步骤</h1>
         <ul>
             <li v-for="(itme,index) in $store.state.infos.step" :key="index">
-                <h5>{{itme.eachtitle}}<span>{{itme.total}}</span></h5>
+                <h5>步骤{{index+1}}<span>/{{$store.state.infos.step.length}}</span></h5>
                 <p>{{itme.eachcontent}}</p>
             </li>
         </ul>

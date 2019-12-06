@@ -2,7 +2,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-26 20:21:48
- * @LastEditTime: 2019-12-02 14:56:02
+ * @LastEditTime: 2019-12-06 11:25:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \day13d:\dingdong\src\components\EatNav.vue
@@ -70,7 +70,7 @@ export default {
         
     },
     created(){
-        axios.get("http://localhost:3000/title")
+        axios.get("http://10.35.161.8:3000/title")
         .then(res=>{
             this.title=res.data
             this.waterfallData=this.getList(this.title)
